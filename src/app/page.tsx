@@ -626,7 +626,7 @@ export default function WeldingDefectDetector() {
                       </div>
                       <p>
                         {
-                          predictions.length > 0 && predictions.some((pred) => pred.class.toLowerCase().includes("good"))
+                          predictions.length > 1 && predictions.some((pred) => pred.class.toLowerCase().includes("good"))
                             ? `The analysis detected ${predictions.length -1} welding defect(s) in the image.`
                             : "No defects were detected in the analyzed areas."
                           }
