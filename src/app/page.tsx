@@ -625,11 +625,11 @@ export default function WeldingDefectDetector() {
                         <span className="font-medium">AI Analysis Summary</span>
                       </div>
                       <p>
-                        {
+                        {/* {
                           predictions.length > 1 && predictions.some((pred) => pred.class.toLowerCase().includes("good"))
                             ? `The analysis detected ${predictions.length -1} welding defect(s) in the image.`
                             : "No defects were detected in the analyzed areas."
-                          }
+                          } */}
 
 
                          
