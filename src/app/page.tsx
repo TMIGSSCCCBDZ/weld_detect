@@ -618,28 +618,7 @@ export default function WeldingDefectDetector() {
                     })}
                   </div>
 
-                  <div className="p-4 rounded-lg bg-blue-900/20 border border-blue-700/30 backdrop-blur-sm">
-                    <div className="text-sm text-blue-300">
-                      <div className="flex items-center mb-2">
-                        <div className="w-2 h-2 rounded-full bg-cyan-400 mr-2"></div>
-                        <span className="font-medium">AI Analysis Summary</span>
-                      </div>
-                      <p>
-                        {/* {
-                          predictions.length > 1 && predictions.some((pred) => pred.class.toLowerCase().includes("good"))
-                            ? `The analysis detected ${predictions.length -1} welding defect(s) in the image.`
-                            : "No defects were detected in the analyzed areas."
-                          } */}
-
-
-                         
-                     
-                        {/* {overallResult && overallResult.includes("Defects")
-                          ? " Critical defects have been detected that may compromise structural integrity."
-                          : " No critical defects were detected in the analyzed areas."} */}
-                      </p>
-                    </div>
-                  </div>
+           
                 </div>
               ) : (
                 <div className="text-center py-10 relative">
@@ -652,7 +631,7 @@ export default function WeldingDefectDetector() {
                 </div>
               )}
             </CardContent>
-          </Card>
+        </Card>
         )}
       </div>
     </div>
