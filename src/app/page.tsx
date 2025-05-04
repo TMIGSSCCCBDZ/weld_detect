@@ -634,9 +634,9 @@ export default function WeldingDefectDetector() {
 
                          
                      
-                        {overallResult && overallResult.includes("Defects")
+                        {/* {overallResult && overallResult.includes("Defects")
                           ? " Critical defects have been detected that may compromise structural integrity."
-                          : " No critical defects were detected in the analyzed areas."}
+                          : " No critical defects were detected in the analyzed areas."} */}
                       </p>
                     </div>
                   </div>
