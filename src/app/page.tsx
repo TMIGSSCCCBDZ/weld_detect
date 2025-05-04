@@ -555,7 +555,7 @@ export default function WeldingDefectDetector() {
                 {overallResult && (
                   <Badge
                     className={`ml-4 ${
-                      overallResult.includes("Defects")
+                      predictions.some((pred) => pred.class.toLowerCase().includes("bad"))
                         ? "bg-gradient-to-r from-red-700 to-red-600 border border-red-500/50 shadow-[0_0_10px_rgba(239,68,68,0.5)]"
                         : "bg-gradient-to-r from-green-700 to-green-600 border border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
                     }`}
