@@ -1,3 +1,4 @@
+
 "use client"
 
 import type React from "react"
@@ -329,58 +330,68 @@ export default function WeldingDefectDetector() {
   const overallResult = getOverallResult()
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900 via-blue-950 to-black text-white p-4 md:p-8 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMzY5ZTEiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiBvcGFjaXR5PSIwLjA1Ii8+PC9zdmc+')]"></div>
-        <div className="absolute -top-[50%] -left-[50%] w-[200%] h-[200%] bg-[radial-gradient(circle,rgba(29,78,216,0.15)_0%,transparent_60%)]"></div>
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[radial-gradient(circle,rgba(6,182,212,0.15)_0%,transparent_60%)]"></div>
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[radial-gradient(circle,rgba(59,130,246,0.1)_0%,transparent_60%)]"></div>
+    <div className="min-h-screen bg-gray-950 text-white p-4 md:p-8 overflow-hidden relative">
+      {/* Background elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMmEyYTJhIiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4zIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+Cjwvc3ZnPgo=')] opacity-20"></div>
+        
+        {/* Subtle gradient overlays */}
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-blue-500/5 via-transparent to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-purple-500/5 via-transparent to-transparent"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Enhanced Header */}
         <header className="mb-12 text-center relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent blur-sm"></div>
-          <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 mb-2 drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]">
-            DEFEX<span className="text-white px-1">•</span>SCAN
-          </h1>
-          <p className="text-blue-300 max-w-2xl mx-auto text-lg">
-            <span className="text-cyan-400 font-semibold">Advanced AI</span> welding defect detection system
-          </p>
-          <div className="mt-4 flex justify-center gap-2">
-            <Badge className="bg-blue-900/50 text-blue-300 border border-blue-500/50 px-3 backdrop-blur-sm">
-              <Cpu className="w-3 h-3 mr-1" /> AI Powered
-            </Badge>
-            <Badge className="bg-blue-900/50 text-blue-300 border border-blue-500/50 px-3 backdrop-blur-sm">
-              <Scan className="w-3 h-3 mr-1" /> Real-time Analysis
-            </Badge>
-            <Badge className="bg-blue-900/50 text-blue-300 border border-blue-500/50 px-3 backdrop-blur-sm">
-              <Shield className="w-3 h-3 mr-1" /> High Precision
-            </Badge>
+          {/* Top accent line */}
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+          
+          <div className="inline-flex items-center justify-center mb-6 p-1 rounded-full bg-gray-800/50 border border-gray-700/50 backdrop-blur-sm">
+            <div className="flex items-center px-4 py-2 rounded-full bg-gray-900/50">
+              <Shield className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-sm text-gray-300 font-medium">DEFEX AI SYSTEM</span>
+            </div>
           </div>
+
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+            Defex AI
+          </h1>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-200">
+            Welding Inspection
+          </h2>
+          
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
+Advanced AI for inspecting welding defects          </p>
+
+          {/* Action buttons */}
+        
+
+          {/* Status indicator */}
+       
         </header>
 
-        <Card className="bg-blue-950/30 border-blue-700/30 backdrop-blur-md mb-8 shadow-[0_0_15px_rgba(37,99,235,0.3)] overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20 pointer-events-none"></div>
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-
-          <CardHeader className="border-b border-blue-800/30">
-            <CardTitle className="text-blue-100 flex items-center">
-              <div className="mr-2 p-1 rounded-full bg-blue-900/50 border border-blue-700/50">
-                <Zap className="w-4 h-4 text-cyan-400" />
+        {/* Main upload card */}
+        <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm mb-8 shadow-2xl">
+          <CardHeader className="border-b border-gray-700/50 pb-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <CardTitle className="text-white text-xl font-semibold mb-2">Upload Image</CardTitle>
+                <CardDescription className="text-gray-400">
+                  Upload an image or take a photo with your camera for AI analysis
+                </CardDescription>
               </div>
-              Image Input
-            </CardTitle>
-            <CardDescription className="text-blue-300">
-              Upload an image or take a photo with your camera
-            </CardDescription>
+              <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                <Upload className="w-6 h-6 text-blue-400" />
+              </div>
+            </div>
           </CardHeader>
+          
           <CardContent className="pt-6">
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
                 variant="outline"
-                className="bg-blue-900/40 border-blue-600/50 hover:bg-blue-800/60 text-blue-100 shadow-[0_0_10px_rgba(37,99,235,0.3)] transition-all duration-300 hover:shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+                className="bg-gray-800/50 border-gray-600/50 hover:bg-gray-700/50 text-gray-200 px-6 py-3 rounded-md transition-all duration-200"
                 onClick={() => fileInputRef.current?.click()}
               >
                 <Upload className="mr-2 h-4 w-4" />
@@ -390,7 +401,7 @@ export default function WeldingDefectDetector() {
               {!isCameraActive ? (
                 <Button
                   variant="outline"
-                  className="bg-blue-900/40 border-blue-600/50 hover:bg-blue-800/60 text-blue-100 shadow-[0_0_10px_rgba(37,99,235,0.3)] transition-all duration-300 hover:shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+                  className="bg-gray-800/50 border-gray-600/50 hover:bg-gray-700/50 text-gray-200 px-6 py-3 rounded-md transition-all duration-200"
                   onClick={startCamera}
                 >
                   <Camera className="mr-2 h-4 w-4" />
@@ -399,7 +410,7 @@ export default function WeldingDefectDetector() {
               ) : (
                 <Button
                   variant="destructive"
-                  className="shadow-[0_0_10px_rgba(239,68,68,0.3)] transition-all duration-300 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)]"
+                  className="bg-red-600/80 hover:bg-red-600 px-6 py-3 rounded-md transition-all duration-200"
                   onClick={stopCamera}
                 >
                   <XCircle className="mr-2 h-4 w-4" />
@@ -410,8 +421,7 @@ export default function WeldingDefectDetector() {
               {isCameraActive && (
                 <>
                   <Button
-                    variant="default"
-                    className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 shadow-[0_0_10px_rgba(8,145,178,0.5)] transition-all duration-300 hover:shadow-[0_0_15px_rgba(8,145,178,0.7)]"
+                    className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md transition-all duration-200"
                     onClick={capturePhoto}
                   >
                     <Camera className="mr-2 h-4 w-4" />
@@ -419,7 +429,7 @@ export default function WeldingDefectDetector() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="bg-blue-900/40 border-blue-600/50 hover:bg-blue-800/60 text-blue-100 shadow-[0_0_10px_rgba(37,99,235,0.3)] transition-all duration-300 hover:shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+                    className="bg-gray-800/50 border-gray-600/50 hover:bg-gray-700/50 text-gray-200 px-6 py-3 rounded-md transition-all duration-200"
                     onClick={switchCamera}
                   >
                     <RefreshCw className="mr-2 h-4 w-4" />
@@ -435,39 +445,32 @@ export default function WeldingDefectDetector() {
 
         {/* Camera view */}
         {isCameraActive && (
-          <Card className="bg-blue-950/30 border-blue-700/30 backdrop-blur-md mb-8 shadow-[0_0_15px_rgba(37,99,235,0.3)] overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20 pointer-events-none"></div>
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-
-            <CardHeader className="pb-0 border-b border-blue-800/30">
-              <CardTitle className="text-blue-100 text-sm flex items-center">
-                <div className="mr-2 p-1 rounded-full bg-blue-900/50 border border-blue-700/50">
-                  <Camera className="w-3 h-3 text-cyan-400" />
-                </div>
+          <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm mb-8 shadow-2xl">
+            <CardHeader className="pb-4 border-b border-gray-700/50">
+              <CardTitle className="text-white text-lg flex items-center">
+                <Camera className="mr-2 w-5 h-5 text-blue-400" />
                 {cameraFacingMode === "user" ? "Front Camera" : "Back Camera"}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0 pt-4">
-              <div className="relative w-full">
-                <video ref={videoRef} autoPlay playsInline className="w-full h-auto rounded-md" />
-                <div className="absolute inset-0 border-2 border-cyan-400/50 pointer-events-none rounded-md shadow-[0_0_20px_rgba(34,211,238,0.3)]"></div>
-
-                {/* Camera HUD elements */}
-                <div className="absolute top-4 left-4 flex items-center bg-black/30 backdrop-blur-md rounded-full px-2 py-1 text-xs text-cyan-300 border border-cyan-500/30">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 mr-2 animate-pulse"></div>
+              <div className="relative w-full mx-4 mb-4">
+                <video ref={videoRef} autoPlay playsInline className="w-full h-auto rounded-lg" />
+                
+                {/* Camera overlay elements */}
+                <div className="absolute top-4 left-4 flex items-center bg-black/40 backdrop-blur-md rounded-full px-3 py-1 text-xs text-green-400 border border-green-500/30">
+                  <div className="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></div>
                   LIVE
                 </div>
 
-                <div className="absolute bottom-4 right-4 bg-black/30 backdrop-blur-md rounded-full px-2 py-1 text-xs text-cyan-300 border border-cyan-500/30">
+                <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-md rounded-full px-3 py-1 text-xs text-gray-300 border border-gray-500/30">
                   AUTO-FOCUS
                 </div>
 
                 {/* Corner brackets */}
-                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-cyan-400/70 rounded-tl-md"></div>
-                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-cyan-400/70 rounded-tr-md"></div>
-                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-cyan-400/70 rounded-bl-md"></div>
-                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-cyan-400/70 rounded-br-md"></div>
+                <div className="absolute top-2 left-2 w-12 h-12 border-t-2 border-l-2 border-blue-400/70"></div>
+                <div className="absolute top-2 right-2 w-12 h-12 border-t-2 border-r-2 border-blue-400/70"></div>
+                <div className="absolute bottom-2 left-2 w-12 h-12 border-b-2 border-l-2 border-blue-400/70"></div>
+                <div className="absolute bottom-2 right-2 w-12 h-12 border-b-2 border-r-2 border-blue-400/70"></div>
               </div>
               <canvas ref={canvasRef} className="hidden" />
             </CardContent>
@@ -476,49 +479,43 @@ export default function WeldingDefectDetector() {
 
         {/* Image display area */}
         {imageURL && !isCameraActive && (
-          <Card className="bg-blue-950/30 border-blue-700/30 backdrop-blur-md mb-8 shadow-[0_0_15px_rgba(37,99,235,0.3)] overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20 pointer-events-none"></div>
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-
+          <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm mb-8 shadow-2xl">
             <CardContent className="p-0">
-              <div className="relative">
+              <div className="relative m-4">
                 <img
                   ref={imageRef}
                   src={imageURL || "/placeholder.svg"}
                   alt="Uploaded welding image"
-                  className="w-full h-auto rounded-md"
+                  className="w-full h-auto rounded-lg"
                   onLoad={handleImageLoad}
                 />
-                {/* {renderBoxes()} */}
 
                 {/* Scanning effect */}
                 {(isLoading || scanAnimation) && (
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-cyan-400 to-transparent opacity-70 animate-scan"></div>
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-lg">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-70 animate-scan"></div>
                   </div>
                 )}
 
                 {/* Loading indicator */}
                 {isLoading && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-blue-950/80 backdrop-blur-sm">
-                    <div className="relative">
-                      <Loader className="w-12 h-12 text-cyan-400 animate-spin mb-4" />
-                      <div className="absolute inset-0 w-12 h-12 rounded-full border-2 border-cyan-400/20 blur-md"></div>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900/90 backdrop-blur-sm rounded-lg">
+                    <div className="relative mb-4">
+                      <Loader className="w-10 h-10 text-blue-400 animate-spin" />
                     </div>
-                    <div className="text-cyan-200 text-lg font-semibold mb-2">Analyzing image...</div>
-                    <div className="text-cyan-300/70 text-sm mb-4">Scanning for defects</div>
-                    <div className="w-64 bg-blue-900/50 rounded-full h-2 overflow-hidden border border-blue-700/50">
-                      <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 animate-progress rounded-full"></div>
+                    <div className="text-white text-lg font-medium mb-2">Analyzing image...</div>
+                    <div className="text-gray-400 text-sm mb-4">Scanning for defects</div>
+                    <div className="w-48 bg-gray-700 rounded-full h-1 overflow-hidden">
+                      <div className="h-full bg-blue-400 animate-pulse rounded-full"></div>
                     </div>
                   </div>
                 )}
 
                 {/* Corner brackets */}
-                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-cyan-400/70 rounded-tl-md"></div>
-                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-cyan-400/70 rounded-tr-md"></div>
-                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-cyan-400/70 rounded-bl-md"></div>
-                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-cyan-400/70 rounded-br-md"></div>
+                <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-blue-400/50"></div>
+                <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-blue-400/50"></div>
+                <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-blue-400/50"></div>
+                <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-blue-400/50"></div>
               </div>
             </CardContent>
           </Card>
@@ -526,45 +523,44 @@ export default function WeldingDefectDetector() {
 
         {/* Error display */}
         {error && (
-          <Card className="bg-red-950/30 border-red-700/30 backdrop-blur-md mb-8 shadow-[0_0_15px_rgba(239,68,68,0.3)] overflow-hidden relative">
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-400 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-400 to-transparent"></div>
-
+          <Card className="bg-red-900/20 border-red-700/50 backdrop-blur-sm mb-8 shadow-2xl">
             <CardContent className="p-4 flex items-center">
-              <div className="p-2 rounded-full bg-red-900/50 border border-red-700/50 mr-3">
+              <div className="p-2 rounded-full bg-red-500/20 border border-red-500/30 mr-3">
                 <AlertCircle className="w-5 h-5 text-red-400" />
               </div>
-              <span>Error: {error}</span>
+              <span className="text-red-200">Error: {error}</span>
             </CardContent>
           </Card>
         )}
 
         {/* Results display */}
         {!isLoading && imageURL && !isCameraActive && (
-          <Card className="bg-blue-950/30 border-blue-700/30 backdrop-blur-md shadow-[0_0_15px_rgba(37,99,235,0.3)] overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20 pointer-events-none"></div>
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-
-            <CardHeader className="border-b border-blue-800/30">
-              <CardTitle className="text-blue-100 flex items-center">
-                <div className="mr-2 p-1 rounded-full bg-blue-900/50 border border-blue-700/50">
-                  <Cpu className="w-4 h-4 text-cyan-400" />
+          <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm shadow-2xl">
+            <CardHeader className="border-b border-gray-700/50">
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="text-white text-xl font-semibold mb-2 flex items-center">
+                    <Cpu className="mr-2 w-5 h-5 text-blue-400" />
+                    Analysis Results
+                  </CardTitle>
+                  {overallResult && (
+                    <Badge
+                      className={`${
+                        predictions.some((pred) => pred.class.toLowerCase().includes("bad"))
+                          ? "bg-red-600/20 border-red-500/50 text-red-200"
+                          : "bg-green-600/20 border-green-500/50 text-green-200"
+                      } font-medium`}
+                    >
+                      {overallResult}
+                    </Badge>
+                  )}
                 </div>
-                Analysis Results
-                {overallResult && (
-                  <Badge
-                    className={`ml-4 ${
-                      predictions.some((pred) => pred.class.toLowerCase().includes("bad"))
-                        ? "bg-gradient-to-r from-red-700 to-red-600 border border-red-500/50 shadow-[0_0_10px_rgba(239,68,68,0.5)]"
-                        : "bg-gradient-to-r from-green-700 to-green-600 border border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
-                    }`}
-                  >
-                    {overallResult}
-                  </Badge>
-                )}
-              </CardTitle>
+                <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                  <Scan className="w-6 h-6 text-blue-400" />
+                </div>
+              </div>
             </CardHeader>
+            
             <CardContent className="pt-6">
               {predictions.length > 0 ? (
                 <div className="space-y-6">
@@ -574,64 +570,57 @@ export default function WeldingDefectDetector() {
                       return (
                         <div
                           key={index}
-                          className={`p-4 rounded-lg flex items-center relative overflow-hidden
+                          className={`p-4 rounded-lg flex items-center border transition-all duration-200 hover:bg-opacity-60
                             ${
                               isBad
-                                ? "bg-red-900/20 border border-red-700/30"
-                                : "bg-green-900/20 border border-green-700/30"
+                                ? "bg-red-900/20 border-red-700/50"
+                                : "bg-green-900/20 border-green-700/50"
                             }`}
                         >
                           <div
-                            className={`absolute inset-0 ${isBad ? "bg-red-500/5" : "bg-green-500/5"} backdrop-blur-sm`}
-                          ></div>
-                          <div
-                            className={`absolute top-0 left-0 right-0 h-px ${isBad ? "bg-gradient-to-r from-transparent via-red-400 to-transparent" : "bg-gradient-to-r from-transparent via-green-400 to-transparent"}`}
-                          ></div>
-                          <div
-                            className={`absolute bottom-0 left-0 right-0 h-px ${isBad ? "bg-gradient-to-r from-transparent via-red-400 to-transparent" : "bg-gradient-to-r from-transparent via-green-400 to-transparent"}`}
-                          ></div>
-
-                          <div
-                            className={`mr-4 p-2 rounded-full ${isBad ? "bg-red-900/50 border border-red-700/50" : "bg-green-900/50 border border-green-700/50"}`}
+                            className={`mr-4 p-2 rounded-full border ${
+                              isBad 
+                                ? "bg-red-500/20 border-red-500/30" 
+                                : "bg-green-500/20 border-green-500/30"
+                            }`}
                           >
                             {isBad ? (
-                              <XCircle className="w-6 h-6 text-red-400" />
+                              <XCircle className="w-5 h-5 text-red-400" />
                             ) : (
-                              <CheckCircle className="w-6 h-6 text-green-400" />
+                              <CheckCircle className="w-5 h-5 text-green-400" />
                             )}
                           </div>
-                          <div className="relative z-10">
-                            <div className="font-medium text-lg">{pred.class}</div>
-                            <div className="text-sm opacity-80 flex items-center mt-1">
-                              <span>Confidence:</span>
-                              <div className="ml-2 w-24 bg-blue-900/50 rounded-full h-1.5 overflow-hidden border border-blue-700/50">
+                          <div className="flex-1">
+                            <div className="font-medium text-white text-lg mb-1">{pred.class}</div>
+                            <div className="text-sm text-gray-400 flex items-center">
+                              <span className="mr-2">Confidence:</span>
+                              <div className="flex-1 max-w-24 bg-gray-700 rounded-full h-1.5 overflow-hidden mr-2">
                                 <div
-                                  className={`h-full ${isBad ? "bg-red-500" : "bg-green-500"} rounded-full`}
+                                  className={`h-full rounded-full ${isBad ? "bg-red-500" : "bg-green-500"}`}
                                   style={{ width: `${pred.confidence * 100}%` }}
                                 ></div>
                               </div>
-                              <span className="ml-2">{(pred.confidence * 100).toFixed(1)}%</span>
+                              <span className="text-white font-medium">{(pred.confidence * 100).toFixed(1)}%</span>
                             </div>
                           </div>
                         </div>
                       )
                     })}
                   </div>
-
-           
                 </div>
               ) : (
-                <div className="text-center py-10 relative">
-                  <div className="absolute inset-0 bg-blue-500/5 backdrop-blur-sm rounded-lg"></div>
-                  <Scan className="w-12 h-12 text-blue-400/50 mx-auto mb-4" />
-                  <div className="text-blue-300 text-lg">No defects or welds detected in the image.</div>
-                  <div className="text-blue-400/70 text-sm mt-2">
+                <div className="text-center py-12">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-700/50 border border-gray-600/50 rounded-full mb-4">
+                    <Scan className="w-8 h-8 text-gray-400" />
+                  </div>
+                  <div className="text-white text-lg font-medium mb-2">No defects or welds detected</div>
+                  <div className="text-gray-400 text-sm">
                     Try uploading a different image or adjusting the camera angle.
                   </div>
                 </div>
               )}
             </CardContent>
-        </Card>
+          </Card>
         )}
       </div>
     </div>
